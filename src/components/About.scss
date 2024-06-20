@@ -1,0 +1,100 @@
+.about-section {
+    position: relative;
+    background-image: url('https://i.ibb.co/qd9fGT0/Downloader-la-66649c2f1209d.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(30, 30, 30, 0.5); // Semi-transparent black overlay
+      backdrop-filter: blur(5px); // Blur effect
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: 90px;
+      font-family: "Dancing Script", cursive;
+      font-weight: 700;
+      color: rgb(255, 170, 0);
+      z-index: 1; // Ensure the text is above the overlay
+    }
+  
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  
+    .about-content {
+      text-align: center;
+      color: #333;
+      background-color: transparent;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid wheat;
+      
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #ff9900;
+      }
+  
+      p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #ffffff;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 40px 0;
+  
+      .about-content {
+        padding: 30px;
+        height: 50vh;
+  
+        h2 {
+          font-size: 2rem;
+        }
+  
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-section {
+      padding: 20px 0;
+      height: 60vh;
+  
+      .about-content {
+        padding: 20px;
+  
+        h2 {
+          font-size: 1.5rem;
+        }
+  
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  

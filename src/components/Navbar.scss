@@ -1,0 +1,135 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(64, 64, 64);
+  background: radial-gradient(
+    circle,
+    rgba(64, 64, 64, 1) 0%,
+    rgba(255, 179, 0, 1) 100%
+  );
+  padding: 10px 20px;
+  color: #fff;
+
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: #606060;
+      }
+    }
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: #ffbb00;
+      }
+    }
+  }
+
+  .navbar-icons {
+    display: flex;
+    gap: 10px;
+
+    a {
+      color: #fff;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: #ffbb00;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .navsocial {
+    display: flex;
+    gap: 10px;
+  }
+  .mobile-nav {
+    display: block; /* Ensure mobile nav is visible on smaller screens */
+    position: relative;
+    background: rgb(64, 64, 64);
+    color: #fff;
+
+    .menu-icon {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      z-index: 2000; // Ensure the menu icon is above other elements
+    }
+
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 75%;
+      height: 100%;
+      background: rgb(244, 241, 0);
+      background: linear-gradient(
+        137deg,
+        rgba(244, 241, 0, 1) 0%,
+        rgba(255, 132, 0, 1) 80%,
+        rgba(230, 111, 0, 1) 100%
+      );
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transform: translateX(100%); // Start hidden to the right
+      transition: transform 0.3s ease-in-out;
+
+      &.open {
+        transform: translateX(0); // Slide in when open
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        li {
+          margin: 20px 0;
+
+          a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            &:hover {
+              color: #aaa;
+            }
+          }
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

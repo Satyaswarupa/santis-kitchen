@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+.home {
+  .home-header {
+    position: relative;
+    // background-image: url('https://as2.ftcdn.net/v2/jpg/06/21/12/51/1000_F_621125107_tLGCGvdSB1lXuYp1c5dl7VRawEMlI6oh.jpg');
+    background-image: url("https://media.istockphoto.com/id/531046794/photo/herbs-condiments-and-spices.jpg?s=612x612&w=0&k=20&c=TN-AATkCYT9aBLybDKCchTK-kse5XKz45Zn6A-jOWXA=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(30, 30, 30, 0.5); // Semi-transparent black overlay
+      backdrop-filter: blur(1px); // Blur effect
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: 90px;
+      font-family: "Dancing Script", cursive;
+      font-weight: 700;
+      color: rgb(255, 170, 0);
+      z-index: 1; // Ensure the text is above the overlay
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 50px;
+      color: rgb(255, 255, 255);
+      z-index: 1;
+    }
+
+    p {
+      margin: 1rem 0 0;
+      font-size: 30px;
+      color: aliceblue;
+      z-index: 1;
+    }
+
+    .social-buttons {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      z-index: 1;
+
+      .social-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.25rem;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        transition: background-color 0.3s ease;
+
+        &.whatsapp {
+          background-color: #25d366;
+          &:hover {
+            background-color: #1da851;
+          }
+        }
+
+        &.instagram {
+          background-color: #e4405f;
+          &:hover {
+            background-color: #c82e48;
+          }
+        }
+      }
+    }
+  }
+
+  .meal-section {
+    padding: 2rem;
+    background: rgb(244, 241, 0);
+    background: linear-gradient(
+      137deg,
+      rgba(244, 241, 0, 1) 0%,
+      rgba(255, 132, 0, 1) 80%,
+      rgba(230, 111, 0, 1) 100%
+    );
+    height: 55vh;
+    h2 {
+      margin-bottom: 10px;
+    }
+    .meal-cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .home {
+    .home-header {
+      position: relative;
+      // background-image: url('https://as2.ftcdn.net/v2/jpg/06/21/12/51/1000_F_621125107_tLGCGvdSB1lXuYp1c5dl7VRawEMlI6oh.jpg');
+      background-image: url("https://media.istockphoto.com/id/531046794/photo/herbs-condiments-and-spices.jpg?s=612x612&w=0&k=20&c=TN-AATkCYT9aBLybDKCchTK-kse5XKz45Zn6A-jOWXA=");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 10rem;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(30, 30, 30, 0.5); // Semi-transparent black overlay
+        backdrop-filter: blur(5px); // Blur effect
+        z-index: 0;
+      }
+  
+      h1 {
+        font-size: 70px;
+        font-weight: 900;
+        width: 300px;
+      }
+  
+      h2 {
+        font-size: 30px;
+        
+      }
+  
+      p {
+        font-size: 25px;
+        width: 300px;
+      }
+  
+      .social-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        z-index: 1;
+  
+        .social-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: .50rem 1rem;
+          font-size: 1rem;
+          border-radius: 5px;
+          text-decoration: none;
+          color: white;
+          transition: background-color 0.3s ease;
+  
+          &.whatsapp {
+            background-color: #25d366;
+            &:hover {
+              background-color: #1da851;
+            }
+          }
+  
+          &.instagram {
+            background-color: #e4405f;
+            &:hover {
+              background-color: #c82e48;
+            }
+          }
+        }
+      }
+    }
+  
+    .meal-section {
+      padding: 2rem;
+      background: rgb(244, 241, 0);
+      background: linear-gradient(
+        137deg,
+        rgba(244, 241, 0, 1) 0%,
+        rgba(255, 132, 0, 1) 80%,
+        rgba(230, 111, 0, 1) 100%
+      );
+      height: 80vh;
+      h2 {
+        margin-bottom: 10px;
+      }
+      .meal-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
